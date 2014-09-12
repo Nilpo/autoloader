@@ -16,13 +16,13 @@ class Autoloader
     /**
      * File extension as a string. Defaults to ".php".
      */
-    protected static $fileext = '.php';
+    protected static $fileExt = '.php';
 
     /**
      * The top level directory where recursion will begin. Defaults to the current
      * directory.
      */
-    protected static $pathtop = __DIR__;
+    protected static $pathTop = __DIR__;
 
     /**
      * A placeholder to hold the file iterator so that directory traversal is only
@@ -40,7 +40,7 @@ class Autoloader
      */
     public static function loader($className)
     {
-        $directory = new RecursiveDirectoryIterator(static::$pathtop, RecursiveDirectoryIterator::SKIP_DOTS);
+        $directory = new RecursiveDirectoryIterator(static::$pathTop, RecursiveDirectoryIterator::SKIP_DOTS);
 
         if (is_null(static::$fileIterator)) {
 
@@ -48,7 +48,7 @@ class Autoloader
 
         }
 
-        $filename = $className . static::$fileext;
+        $filename = $className . static::$fileExt;
 
         foreach (static::$fileIterator as $file) {
 
@@ -68,13 +68,13 @@ class Autoloader
     }
 
     /**
-     * Sets the $fileext property
+     * Sets the $fileExt property
      *
-     * @param string $fileext The file extension used for class files.  Default is "php".
+     * @param string $fileExt The file extension used for class files.  Default is "php".
      */
-    public static function setFileExt($fileext)
+    public static function setFileExt($fileExt)
     {
-        static::$fileext = $fileext;
+        static::$fileExt = $fileExt;
     }
 
     /**
@@ -85,7 +85,7 @@ class Autoloader
      */
     public static function setPath($path)
     {
-        static::$pathtop = $path;
+        static::$pathTop = $path;
     }
 
 }
