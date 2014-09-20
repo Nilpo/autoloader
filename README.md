@@ -106,10 +106,10 @@ current PHP file.
 
 ```php
 
-    //  include the autoloader class near the top of your page
-    <?php
+//  include the autoloader class near the top of your page
+<?php
 
-    include 'classes/Autoloader.php';
+include 'classes/Autoloader.php';
 ```
 
 Classes can then be loading dynamically without any additional include
@@ -125,7 +125,7 @@ default file extension near the bottom of the Autoloader.php file.
 
 ```php
 
-    Autoloader::setFileExt('.class.php');
+Autoloader::setFileExt('.class.php');
 ```
 
 
