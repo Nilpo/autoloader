@@ -40,6 +40,9 @@ namespaces.
 
 ## Changelog
 
+**v1.1.2**
+* Minor fixes to README.md.
+
 **v1.1.1**
 * Added comment to sample index.php file.
 
