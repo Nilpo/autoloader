@@ -41,6 +41,7 @@ namespaces.
 ## Changelog
 
 **9/20/14**
+* 1.1.1  Added comment to sample index.php file.
 * 1.1.0  Initial release
 
 
