@@ -105,10 +105,9 @@ Once the *autoload.php* file is in place, include it once near the top of your
 current PHP file.
 
 ```php
-
-//  include the autoloader class near the top of your page
 <?php
 
+// include the autoloader class near the top of your page
 include 'classes/Autoloader.php';
 ```
 
@@ -124,7 +123,6 @@ names such as *MyObject.class* or *MyObject.class.php*, you can change the
 default file extension near the bottom of the Autoloader.php file.
 
 ```php
-
 Autoloader::setFileExt('.class.php');
 ```
 
