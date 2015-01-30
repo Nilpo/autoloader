@@ -43,7 +43,7 @@ class Autoloader
     protected static $fileExt = '.php';
 
     /**
-     * The top level directory where recursion will begin. Defaults to the current
+     * The topmost directory where recursion should begin. Defaults to the current
      * directory.
      */
     protected static $pathTop = __DIR__;

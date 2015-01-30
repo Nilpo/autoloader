@@ -32,13 +32,16 @@ opposed to hard-coding an include statement for each class file dependency in
 every file.  This allows for faster development and less bloated files.
 
 ### PHP support for autoloading
-PHP 5 added support for autoloading with the introduction of the __autoload()
-function.  The spl_autoload_register() function added in PHP 5.1.2 provided
+PHP 5 added support for autoloading with the introduction of the `__autoload()`
+function.  The `spl_autoload_register()` function added in PHP 5.1.2 provided
 more flexibility and is considered to be the proper method of implementing
 autoloading in PHP today.  More recently, PHP 5.3 has added support for
 namespaces.
 
 ## Changelog
+
+**v1.1.3**
+* Minor updates to documentation.
 
 **v1.1.2**
 * Minor fixes to README.md.
@@ -118,11 +121,11 @@ Classes can then be loading dynamically without any additional include
 statements as long as the class file is found in the same directory or in a
 directory beneath the autoload.php file itself.
 
-By default, the autoloader assumes that you are using the *classname.php* file
-naming convention.  In other words, the class *MyObject* would be found in a
-file named *MyObject.php*.  The autoloader is not case-sensitive.  Support for
+By default, the autoloader assumes that you are using the *`classname.php`* file
+naming convention.  In other words, the class *`MyObject`* would be found in a
+file named *`MyObject.php`*.  The autoloader is not case-sensitive.  Support for
 other naming conventions is available.  If your naming convention uses file
-names such as *MyObject.class* or *MyObject.class.php*, you can change the
+names such as *`MyObject.class`* or *`MyObject.class.php`*, you can change the
 default file extension near the bottom of the Autoloader.php file.
 
 ```php
