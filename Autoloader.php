@@ -41,7 +41,7 @@ class Autoloader
      * File prefix as a string. Defaults to empty.
      * It allows to prefix files e.g class.myclass.php
      */
-    protected static $filePrefix = "";
+    protected static $filePrefix = "class.";
 
     /**
      * File extension as a string. Defaults to ".php".
