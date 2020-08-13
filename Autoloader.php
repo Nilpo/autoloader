@@ -38,7 +38,7 @@
 class Autoloader
 {
     /**
-     * File suffix as a string. Defaults to empty.
+     * File prefix as a string. Defaults to empty.
      * It allows to prefix files e.g class.myclass.php
      */
     protected static $filePrefix = "";
