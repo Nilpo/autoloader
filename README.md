@@ -5,8 +5,7 @@ A simple PHP autoloader that loads class files recursively.
 
 ### Purpose
 
-There are several nice fully-featured, [PSR-0](http://www.php-fig.org/psr/psr-0/)/[PSR-4]
-(http://www.php-fig.org/psr/psr-4/) compliant autoloaders out there.  Many
+There are several nice fully-featured, [PSR-0](http://www.php-fig.org/psr/psr-0/)/[PSR-4](http://www.php-fig.org/psr/psr-4/) compliant autoloaders out there.  Many
 packages such as [Composer]() come with them pre-packaged, but they can also be
 used independently.  Why create yet another with so many truly nice options
 available?  Simplicity.  I wanted something simple and basic that I could drop
