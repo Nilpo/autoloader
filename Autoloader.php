@@ -38,6 +38,12 @@
 class Autoloader
 {
     /**
+     * File prefix as a string. Defaults to empty.
+     * It allows to prefix files e.g class.myclass.php
+     */
+    protected static $filePrefix = "class.";
+
+    /**
      * File extension as a string. Defaults to ".php".
      */
     protected static $fileExt = '.php';
@@ -72,14 +78,13 @@ class Autoloader
 
         }
 
-        $filename = $className . static::$fileExt;
+        $filename = static::$filePrefix . $className . static::$fileExt;
 
         foreach (static::$fileIterator as $file) {
 
             if (strtolower($file->getFilename()) === strtolower($filename)) {
 
                 if ($file->isReadable()) {
-
                     include_once $file->getPathname();
 
                 }
@@ -89,6 +94,16 @@ class Autoloader
 
         }
 
+    }
+
+    /**
+     * Sets the $filePrefix property
+     *
+     * @param string $filePrefix used to prefix a file e.g class.myclass.php
+     */
+    public static function setFilePrefix($filePrefix)
+    {
+        static::$filePrefix = $filePrefix;
     }
 
     /**
